@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Sceny/Menu/Menu.unity
+- path: Assets/Sceny/Poziom 1/Poziom 1.unity
   isLoaded: 1
   isActive: 1
