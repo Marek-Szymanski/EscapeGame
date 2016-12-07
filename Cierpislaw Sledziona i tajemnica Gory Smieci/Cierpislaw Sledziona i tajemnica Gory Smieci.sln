@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{36204338-F857-CB15-0796-0C1A0BE6A8E3}") = "Cierpislaw Sledziona i tajemnica Gory Smieci", "Assembly-CSharp.csproj", "{8BCBF256-DABC-6D6E-1277-08C4FB600A79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BCBF256-DABC-6D6E-1277-08C4FB600A79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BCBF256-DABC-6D6E-1277-08C4FB600A79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BCBF256-DABC-6D6E-1277-08C4FB600A79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BCBF256-DABC-6D6E-1277-08C4FB600A79}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
