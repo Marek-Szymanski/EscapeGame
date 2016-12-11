@@ -47,8 +47,9 @@
   <ItemGroup>
      <Compile Include="Assets\Sceny\Menu\Wyjdz.cs" />
      <Compile Include="Assets\Sceny\Menu\zmienScene.cs" />
-     <Compile Include="Assets\Sceny\Poziom 1\Telefon_skrypt.cs" />
-     <Compile Include="Assets\Sceny\Poziom 1\ZamknijTelefon.cs" />
+     <Compile Include="Assets\Sceny\Poziom 1\Zagadka telefon\Poziom1.cs" />
+     <Compile Include="Assets\Sceny\Poziom 1\Zagadka telefon\Telefon_skrypt.cs" />
+     <Compile Include="Assets\Sceny\Poziom 1\Zagadka telefon\ZamknijTelefon.cs" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
