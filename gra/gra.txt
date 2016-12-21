@@ -184,6 +184,7 @@ Stopień poczynionych postępów:
 - wstępne zagadki do wszystkich poziomów
 - opracowana fabuła gry i zagadki do pierwszego poziomu i drugiego
 - zarys grafik postaci
+- kawałki muzyki
 
 - zadania do 21 grudnia - wykonane!
 
