@@ -1,0 +1,189 @@
+WYTYCZNE:
+
+Każda grupa (2-5 osobowa) przed rozpoczęciem tworzenia gry powinna przygotować wstępny projekt zawierający: reguły gry,
+rodzaj i liczbę graczy, sposób komunikacji wewnętrznej i zewnętrznej, cel gry i drogę do jego osiągnięcia, wizję świata i rodzaj kamery oraz szkic fabuły.
+W drugiej kolejności grupa powinna opracować timeline prac z milestones i przydział zadań poszczególnym członkom zespołu. 
+Wstępny projekt powinien znaleźć się w systemie śledzenia wersji i/lub pracy grupowej.
+Następnie należy dokonać doboru narzędzi i przystąpienia do tworzenia gry.
+
+OCENA:
+Projekt wstępny.
+Jakość gry.
+Planowość realizacji projektu.
+Stopień poczynionych postępów.
+Obecności.
+
+
+
+Pomysł na grę:
+
+- Gra mogłaby mieć kilka poziomów trudności - wstępnie 5. Każdy poziom to inne pomieszczenie, z którego należałoby się uwolnić. Na każdym levelu byłoby więcej zagadek do rozwiązania, o różnym stopniu trudności.
+- Za złe rozwiązanie zagadki tracilibyśmy punkty.
+- Gra kończyłaby się sukcesem, jeśli gracz przejdzie wszystkie poziomy trudności, wówczas dziennikarz napisałby artykuł i firma śmieciarska została by zatrzymana. Bądź porażką jeśli za którymś podejściem nie uda mu się przejść plansz, wtedy dziennikarzowi nie udałoby się napisać dobrego artykułu.
+
+
+
+Wytyczne:
+1. Grupa 4 osobowa:
+- Marek Szymański
+- Anita Jakubaszek
+- Marta Gołębiowska
+- Karolina Górska
+
+2. Środowisko gry: Unity
+3. Język programowana C#
+4. Gra 2D
+5. Rodzaj gry: przygodowa/zręcznośćiowa/logiczna na spostrzegawczosć, gra na punkty
+6. Liczba graczy: 1 gracz
+7. Bohater - dziennikarz Cierpisław Śledziona, Dziadumiła Postępnego, Duch Dziadziusia, Boligłowa
+8. Cel gry: Zatrzymanie szajki śmieciarskiej poprzez rozwiązanie serii zagadek
+9. Fabuła gry:
+Intro:
+Była zimna deszczowa noc. Świeżo upieczony dziennikarz Cierpisław Śledziona przemierzał upostoszałą ulicę wsłuchując się w świszczący wiatr. Z jego rozmyśleń wyrwał go przerażajacy łoskot
+tłuczącej się butelki. Drgnął. Zakradł się do miejsca skąd dochodził dźwięk...
+10. Komunikacja zewnetrzna / wewnętrzna:
+- Git
+
+11. Opis:
+Wcielamy się w postać dziennikarza Cierpisława Śledzionę. Bohater ma na celu naprostowanie rażących zaniedbań firmy śmieciarskiej Zmiotki sp. z o.o. 
+Udajemy się do przełożonego. Prosimy o zadanie  - napisanie artykułu o zaniedbaniu firmy śmieciarskiej.  Szef (Boligłowa) się nie zgadza twierdząc, że to nikogo nie obchodzi co się dzieje ze śmieciami. (Po prostu zbyt nudny temat jak na artykuł) 
+Więc postanawiamy napisać artykuł na własną rękę.
+(wszędzie są zagadki)
+Pozim pierwszy - gabinet przełożonego:
+- zagadki,
+- przedmioty do odnalezienia:
+*część umowy
+*fragment zdjecia
+*klucz
+*...
+Rozgałęzienie:
+poziom 1b) Sekretariat:
+-dialog - IF ( nie wzbudzimy podejrzenie naszejosoby to dostajemy klucz (o ile go nie mamy)) ELSE (zaprowadzają nas do aresztu)
+- przedmioty do zdobycia:
+*klucz
+-przechodzimy do Lbiryntu - poziom 2b
+poziom 2) Labirynt:
+-przedmioty do zdobycia:
+*fragment zdjecia
+*strój dostawcy pizzy
+*kulki
+*lampa Dziadka
+Poziom trzeci:
+3a) sekretariat w firmie Zmiotki
+*dialog IF(nie wzbudzimy podejrzenie naszejosoby to dostajemy klucz (o ile go nie mamy)) ELSE (zaprowadzają nas do aresztu)
+- przechodzimy do poziomu 4
+3b) gabinet sróża
+-znajdujemy monitoring - chcemy znaleść video
+-przedmioty do zdobycia:
+*fragment zdjecia
+*karta do gabinetu prezesa
+*fanty przeciwko stróżowi - ewentualnie
+Poziom Czwarty -gabinet prezesa (Dziadumiła Postępnęgo):
+-przedmioty do znalezienia:
+*fragment umowy,
+*zdjęcie
+*klucz do serwerowni
+Poziom piąty - serwerownia:
+-przedmioty do zdobycia:
+- fragment zdjecia
+- nagranie z kamer ochrony
+
+Zakończenia gry:
+Zakończenie na poziomie 4 gdy:
+*pozytywnie:
+- mamy tylko całe zdjecie 
+- mamy całe zdjecie i umowę
+- mamy tylko umowę
+Zakończenie na poziomie 5:
+-mamy nagranie
+- mamy zdjęcie 
+- mamy umowe
+- mamy kilka z nich
+
+Rodzaje pomieszczeń
+*gazeta:
+- gabinet przełożonego
+- sekretariat w gazecie
+*
+- labirynt
+*firma zmiotki:
+- sekretariat w firmie zmiotki
+- pokój stróża w firmie zmiotki
+- gabinet prezesa firmy zmiotki
+- serwerownia w firmie zmiotki
+*
+posterunek policji
+*
+- muzyka:
+* dźwięki zdobywania przedmiotów
+* muzyka w tle
+* muzyka w menu
+* muzyka w intro i zakończenie
+* dźwięki rozwiązania poprawnie i negatywnie zagadki
+
+Obowiązki - wstępne: 
+ 
+Karolina Górska:
+- poziom drugi - labirynt - kod, grafika
+- posterunek policji - grafika
+- zagadki
+- grafika przedmiotów do zdobycia
+Marta Gołębiowska:
+- grafika do menu głównego, intro i przejścia między poziomami, postacie, zakończenie
+- poziom 3 - kod
+- zagadki
+Anita Jakubaszek:
+- grafika poziom 3,4,5
+- poziom 4 - kod
+- zagadki
+Marek Szymański:
+- menu - kod
+- poziom 1 i 5 - pierwsze pomieszczenie - kod
+- pozimo 1 - grafika
+- zagadki
+Praca wspólna:
+- fabuła gry
+- zagadki
+- podstawa gry - kod  
+- zarys gry
+- muzyka
+
+DeadLine:
+
+** 26.10.2016:
+- ogólny zarys gry i podział obowiązków
+** do 21 grudnia:
+- zarys grafiki do intra i menu głównego
+- podstawa gry i menu - kod
+- zarys grafik pomiwszczeń
+- zagadki poziom pierwszy i drugi
+- zarys grafik postaci
+** do 25 Stycznia (1 Luty):
+- poziom 1 i 2 - kod
+- grafika do poziomu 2
+- wykończenie poziomu pierwszego
+- grafika postaci
+** do końca Lutego:
+- poziom 3 -kod
+- zagadki poziom 3
+** dokońca Marca:
+- poziom 4 - kod
+- zagadki poziom 4
+** do końca kwiecień:
+- poziom 5- kod
+- zagadki poziom 5
+** maj:
+- refraktoryzacja i testowanie gry
+
+
+Stopień poczynionych postępów:
+- ogólny zarys gry i podział obowiązkó
+- podstawa gry i menu
+- zarys grafiki poziom 1 
+- zarys grafiki do przejściowego poziomu 
+- wstępne zagadki do wszystkich poziomów
+- opracowana fabuła gry i zagadki do pierwszego poziomu i drugiego
+- zarys grafik postaci
+
+- zadania do 21 grudnia - wykonane!
+
