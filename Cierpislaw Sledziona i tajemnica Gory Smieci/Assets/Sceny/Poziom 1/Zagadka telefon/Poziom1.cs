@@ -76,7 +76,7 @@ public class Poziom1 : MonoBehaviour
 	{
 		if (punkty >= 6) 
 		{
-			Application.LoadLevel ("Menu");
+			Application.LoadLevel ("poziom2");
 		}
 		if (Input.GetMouseButton (0)) 
 		{
@@ -86,111 +86,13 @@ public class Poziom1 : MonoBehaviour
 			{
 				if (hitInfo.collider.name == "Gabinet Szefa_telefon" && telefonBool && !zagadka.active) 
 				{
-					int a, b, c, d;
-					a = 5;
-					b = 5;
-					c = 5;
-					d = 5;
-
-					bool losowanie = true;
-
-					while (losowanie)
-					{
-						Random rnd = new Random ();
-						int rand = 0;
-						rand = System.DateTime.Now.Millisecond % 4;
-
-
-						if (a != rand && b != rand && c != rand && d != rand) {
-							if (a == 5) {
-								a = rand;
-							} else if (b == 5) {
-								b = rand;
-							} else if (c == 5) {
-								c = rand;
-							} else if (d == 5) {
-								d = rand;
-							}
-						} 
-						else if(a!=5 && b!=5 && c!=5 && d!=5)
-						{
-							losowanie = false;
-						}
-					}
-
-					switch (a)
-					{
-					case 0:
-						odp_A = zagadki [0].odpowiedzA;
-						break;
-					case 1:
-						odp_A = zagadki [0].odpowiedzB;
-						break;
-					case 2:
-						odp_A = zagadki [0].odpowiedzC;
-						break;
-					case 3:
-						odp_A = zagadki [0].odpowiedzD;
-						break;
-					}
-
-					switch (b)
-					{
-					case 0:
-						odp_B = zagadki [0].odpowiedzA;
-						break;
-					case 1:
-						odp_B = zagadki [0].odpowiedzB;
-						break;
-					case 2:
-						odp_B = zagadki [0].odpowiedzC;
-						break;
-					case 3:
-						odp_B = zagadki [0].odpowiedzD;
-						break;
-					}
-
-					switch (c)
-					{
-					case 0:
-						odp_C = zagadki [0].odpowiedzA;
-						break;
-					case 1:
-						odp_C = zagadki [0].odpowiedzB;
-						break;
-					case 2:
-						odp_C = zagadki [0].odpowiedzC;
-						break;
-					case 3:
-						odp_C = zagadki [0].odpowiedzD;
-						break;
-					}
-					switch (d)
-					{
-					case 0:
-						odp_D = zagadki [0].odpowiedzA;
-						break;
-					case 1:
-						odp_D = zagadki [0].odpowiedzB;
-						break;
-					case 2:
-						odp_D = zagadki [0].odpowiedzC;
-						break;
-					case 3:
-						odp_D = zagadki [0].odpowiedzD;
-						break;
-					}
-					pytanie = zagadki [0].tresc;
-//					odp_A = zagadki [0].odpowiedzA;
-//					odp_B = zagadki [0].odpowiedzB;
-//					odp_C = zagadki [0].odpowiedzC;
-//					odp_D = zagadki [0].odpowiedzD;
-					odp_poprawna = zagadki [0].prawidlowaOdpowiedz;
+					pobierzZagadke (0);
 					telefonBool = false;
 					showPopUp = true;
 				}
 				else if (hitInfo.collider.name == "Gabinet Szefa_papiery" && notatiBool && !zagadka.active) 
 				{
+					pobierzZagadke (1);
 					notatiBool = false;
 					showPopUp = true;
 				}
@@ -298,6 +200,115 @@ public class Poziom1 : MonoBehaviour
 		}
 	}
 
+	void pobierzZagadke(int i)
+	{
+		int a, b, c, d;
+		a = 5;
+		b = 5;
+		c = 5;
+		d = 5;
+
+		bool losowanie = true;
+
+		while (losowanie)
+		{
+			Random rnd = new Random ();
+			int rand = 0;
+			rand = System.DateTime.Now.Millisecond % 4;
+
+
+			if (a != rand && b != rand && c != rand && d != rand) {
+				if (a == 5) {
+					a = rand;
+				} else if (b == 5) {
+					b = rand;
+				} else if (c == 5) {
+					c = rand;
+				} else if (d == 5) {
+					d = rand;
+				}
+			} 
+			else if(a!=5 && b!=5 && c!=5 && d!=5)
+			{
+				losowanie = false;
+			}
+		}
+
+		switch (a)
+		{
+		case 0:
+			odp_A = zagadki [i].odpowiedzA;
+			break;
+		case 1:
+			odp_A = zagadki [i].odpowiedzB;
+			break;
+		case 2:
+			odp_A = zagadki [i].odpowiedzC;
+			break;
+		case 3:
+			odp_A = zagadki [i].odpowiedzD;
+			break;
+		}
+
+		switch (b)
+		{
+		case 0:
+			odp_B = zagadki [i].odpowiedzA;
+			break;
+		case 1:
+			odp_B = zagadki [i].odpowiedzB;
+			break;
+		case 2:
+			odp_B = zagadki [i].odpowiedzC;
+			break;
+		case 3:
+			odp_B = zagadki [i].odpowiedzD;
+			break;
+		}
+
+		switch (c)
+		{
+		case 0:
+			odp_C = zagadki [i].odpowiedzA;
+			break;
+		case 1:
+			odp_C = zagadki [i].odpowiedzB;
+			break;
+		case 2:
+			odp_C = zagadki [i].odpowiedzC;
+			break;
+		case 3:
+			odp_C = zagadki [i].odpowiedzD;
+			break;
+		}
+		switch (d)
+		{
+		case 0:
+			odp_D = zagadki [i].odpowiedzA;
+			break;
+		case 1:
+			odp_D = zagadki [i].odpowiedzB;
+			break;
+		case 2:
+			odp_D = zagadki [i].odpowiedzC;
+			break;
+		case 3:
+			odp_D = zagadki [i].odpowiedzD;
+			break;
+		}
+		pytanie = zagadki [i].tresc;
+		//					odp_A = zagadki [0].odpowiedzA;
+		//					odp_B = zagadki [0].odpowiedzB;
+		//					odp_C = zagadki [0].odpowiedzC;
+		//					odp_D = zagadki [0].odpowiedzD;
+		odp_poprawna = zagadki [i].prawidlowaOdpowiedz;
+
+	}
+
+
+
+
+
 
 	void generowanieZagadek()
 	{
@@ -314,16 +325,13 @@ public class Poziom1 : MonoBehaviour
 		temp.odpowiedzD = "37, 58, 86, 100";
 		zagadki.Add (temp);
 
-//		temp.tresc = "";
-//		temp.prawidlowaOdpowiedz = "";
-//		temp.odpowiedzA = "";
-//		temp.odpowiedzB = "";
-//		temp.odpowiedzC = "";
-//		temp.odpowiedzD = "";
-//		zagadki.Add (temp);
-
-
-
+		temp.tresc = "Do pokoju weszły litery a i b\nPo chwili a wyszło drzwiami, a b oknem.\n Jaka litera została?";
+		temp.prawidlowaOdpowiedz = "i";
+		temp.odpowiedzA = "g";
+		temp.odpowiedzB = "h";
+		temp.odpowiedzC = "i";
+		temp.odpowiedzD = "j";
+		zagadki.Add (temp);
 
 	}
 
