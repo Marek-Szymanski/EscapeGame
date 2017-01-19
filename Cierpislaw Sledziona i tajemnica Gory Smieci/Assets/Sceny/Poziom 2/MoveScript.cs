@@ -5,49 +5,38 @@ using UnityEngine;
 public class MoveScript : MonoBehaviour {
 
     // Use this for initialization
-    public GameObject cierpislawSledziona;
-    public Camera kamera;
-	void Start () {
+   public Rigidbody2D rb;
+    void Start () {
+
+        rb = GetComponent<Rigidbody2D>();
 
     }
 
-    // Update is called once per frame
-
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.name == "YourWallName")  // or if(gameObject.CompareTag("YourWallTag"))
-        {
-            rigidbody.velocity = Vector3.zero;
-        }
-    }
 
     void Update () {
+        
         if (Input.GetKey(KeyCode.W))
         {
-            Vector3 temp = new Vector3(0.0f, 0.5f, 0.0f);
-            cierpislawSledziona.transform.position += temp;
-        }
+            rb.velocity = new Vector2(5f, 5f);
+	
+        }else
         if (Input.GetKey(KeyCode.S))
         {
-            Vector3 temp = new Vector3(0.0f, 0.5f, 0.0f);
-            cierpislawSledziona.transform.position -= temp;
-        }
+             rb.velocity =new Vector2(0f, -5f);
+    
+        }else
         if (Input.GetKey(KeyCode.A))
         {
-            Vector3 temp = new Vector3(0.5f, 0.0f, 0.0f);
-            cierpislawSledziona.transform.position -= temp;
-        }
+            rb.velocity = new Vector2(-5f, 0.0f);
+       
+        }else
         if (Input.GetKey(KeyCode.D))
         {
-            Vector3 temp = new Vector3(0.5f, 0.0f, 0.0f);
-            cierpislawSledziona.transform.position += temp;
-        }
-
-        kamera.transform.position = cierpislawSledziona.transform.position;
-
-        kamera.transform.position -= new Vector3(0.0f,0.0f,10.0f);
-
+            rb.velocity = new Vector2(5f, 0.0f);
+  
+        }else
+        rb.velocity = new Vector2(0, 0);
+        Debug.Log(rb.velocity);
 
     }
 }
