@@ -1,10 +1,12 @@
 fileFormatVersion: 2
 guid: c19646a5166d8774989f5b0c7c74a653
-timeCreated: 1484148474
+timeCreated: 1485003272
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - rb: {instanceID: 0}
+  - smieci: {fileID: 1833209567034618, guid: f640c2a0fe757194fa5f165e1c52a59f, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
