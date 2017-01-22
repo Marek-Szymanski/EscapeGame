@@ -51,7 +51,8 @@ public class MoveScript : MonoBehaviour {
     private int punkty;
 
     private int count;
-    private bool isdone=false;
+    private bool isdone=true;
+
 
 
 
@@ -82,24 +83,17 @@ public class MoveScript : MonoBehaviour {
         Debug.Log("spawn1 ");
 
         SpawnSmieci();
-       // OnCollisionEnter2D(GetComponent<Collision2D>());
+ 
 
     }
 
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.tag == "zagadki" || col.gameObject.tag=="labirynt")
-        {
-            Destroy(col.gameObject);
-        }
-    }
 
     void SpawnSmieci()
     {
         for (int i = 0; i < count; i++)
         {
             Debug.Log("spawn2 ");
-            Vector3 randomSpwan = new Vector3(Random.Range(-29.32808f, 0.7500296f), Random.Range(-30.43662f, 191.0547f) - 10.0f);
+            Vector3 randomSpwan = new Vector3(Random.Range(-29.32808f, -10.56179f), Random.Range(-30.43662f, 191.0547f) - 10.0f);
             Instantiate(smieci[i], randomSpwan, Quaternion.identity);
         }
     }
@@ -139,26 +133,26 @@ public class MoveScript : MonoBehaviour {
             Application.LoadLevel("poziom1");
         }
         Debug.Log("zagadka1 ");
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && isdone==true)
         {
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hitInfo = Physics2D.Raycast(pos, Vector2.zero);
             if (hitInfo != null && hitInfo.collider != null)
             {
-                int i = 0;
-                int j = 0;
-                while (zagatkaBool[i] != 1)
+                Random rnd = new Random();
+                int rand = 0;
+                
+                while (zagatkaBool[rand] == 0)
                 {
-                    i = Random.Range(0, count);       
+                    rand = System.DateTime.Now.Millisecond % count;
                 }
-                j = i;
-
-                if (hitInfo.collider.name == "zagadka" && zagatkaBool[j] == 1 && !zagadka.active)
+                if (hitInfo.collider.tag == "zagadki" && zagatkaBool[rand] == 1 && !zagadka.active)
                     {
 
-                        pobierzZagadke(i);
-                        zagatkaBool[i] = 0;
+                        pobierzZagadke(rand);
+                        zagatkaBool[rand] = 0;
                         showPopUp = true;
+                        isdone = false;
                     }
                 
 
@@ -205,6 +199,7 @@ public class MoveScript : MonoBehaviour {
     {
         if (odpowiedzA.GetComponentInChildren<Text>().text == odp_poprawna)
         {
+            isdone = true;
             showPopUp = false;
             Debug.Log("TAK");
             punkty += 3;
@@ -212,6 +207,7 @@ public class MoveScript : MonoBehaviour {
         }
         else
         {
+            isdone = true;
             showPopUp = false;
             punkty--;
             licznikPunktowStr.text = "Punkty: " + punkty;
@@ -222,6 +218,7 @@ public class MoveScript : MonoBehaviour {
     {
         if (odpowiedzB.GetComponentInChildren<Text>().text == odp_poprawna)
         {
+            isdone = true;
             showPopUp = false;
             Debug.Log("TAK");
             punkty += 3;
@@ -229,6 +226,7 @@ public class MoveScript : MonoBehaviour {
         }
         else
         {
+            isdone = true;
             showPopUp = false;
             punkty--;
             licznikPunktowStr.text = "Punkty: " + punkty;
@@ -239,6 +237,7 @@ public class MoveScript : MonoBehaviour {
     {
         if (odpowiedzC.GetComponentInChildren<Text>().text == odp_poprawna)
         {
+            isdone = true;
             showPopUp = false;
             Debug.Log("TAK");
             punkty += 3;
@@ -246,6 +245,7 @@ public class MoveScript : MonoBehaviour {
         }
         else
         {
+            isdone = true;
             showPopUp = false;
             punkty--;
             licznikPunktowStr.text = "Punkty: " + punkty;
@@ -256,6 +256,7 @@ public class MoveScript : MonoBehaviour {
     {
         if (odpowiedzD.GetComponentInChildren<Text>().text == odp_poprawna)
         {
+            isdone = true;
             showPopUp = false;
             Debug.Log("TAK");
             punkty += 3;
@@ -263,6 +264,7 @@ public class MoveScript : MonoBehaviour {
         }
         else
         {
+            isdone = true;
             showPopUp = false;
             punkty--;
             licznikPunktowStr.text = "Punkty: " + punkty;
